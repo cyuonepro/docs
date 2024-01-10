@@ -2,7 +2,7 @@
 
 [[toc]]
 
-This document primarily focuses on the rational planning of the HyperBDR network and disaster recovery takeover, as well as the network used for exercises, prior to the commencement of the project. The following are fundamental principles for network planning:
+This document primarily focuses on the rational planning of the HyperBDR network and disaster recovery takeover, as well as the network used for drills, prior to the commencement of the project. The following are fundamental principles for network planning:
 
 
 - HyperBDR should be deployed within the disaster recovery platform to ensure that, in the event of a production platform failure, HyperBDR can still effectively recover business systems on the disaster recovery platform.
