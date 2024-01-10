@@ -4,11 +4,11 @@
 
 ### Windows Server 2016
 
-This document describes how to obtain host information on a windows host, including the host name, operating system version, cpu, memory, and disk information. In this section, use windows server 2016 as a reference. You can query other operating system versions by yourself.
+This document describes how to obtain host information on a windows host, including the host name, operating system version, cpu, memory, and disk information. This section utilizes Windows Server 2016 as a point of reference. Feel free to independently explore queries for alternative operating system versions.
 
 #### Get host name, operating system version, cpu, memory, etc. (Control Panel)
 
-Open Control Pannel，System and Security，System to retrieve relevant information.
+Open Control Pannel -> System and Security -> System to retrieve relevant information.
 
 ![hyperbdr-agent-investigation-copy-1.png](./images/hyperbdr-agent-investigation-copy-1.png)
 
@@ -36,7 +36,7 @@ The output is as follows; you can check the Host Name, OS Name, Processor(s), an
 Open the "Control Panel", go to "System and Security", select "Administrative Tools", click the "Computer Management", and click on "Disk Management".
 
 
-1. **Retrieve the number of disks.**
+1. **Retrieve the number of disks**
 
 
 As shown in the figure below, Disk 0 represents the first disk. If there are multiple storage devices, they will be sequentially labeled as Disk 1, Disk x, and so on, with each one representing an independent storage unit. Just record the total number.
@@ -44,7 +44,7 @@ As shown in the figure below, Disk 0 represents the first disk. If there are mul
 ![hyperbdr-agent-investigation-copy-3.png](./images/hyperbdr-agent-investigation-copy-3.png)
 
 
-2. **Retrieve the actual usage of each disk.**
+2. **Retrieve the actual usage of each disk**
 
 
 As shown in the figure below, at the upper-right position, the allocation and usage information for all disks are displayed. 'C' represents a partition with corresponding capacity and available space. You can calculate the actual usage of the current 'C' partition by subtracting the available space from the total capacity. A single disk may have multiple partitions, so correspondingly check the lower-right position of Disk 0 in the figure to determine the disk to which each partition belongs. This way, you can separately calculate the actual usage of each disk.
@@ -58,7 +58,7 @@ As shown in the figure below, at the upper-right position, the allocation and us
 
 This document primarily guides on obtaining relevant host information on a Linux machine, including the host name, operating system version, CPU, memory, disk, and other details. The steps for collecting Linux host information in this instance will be based on CentOS 7; for other operating system versions, please refer to their respective documentation.
 
-#### 1. Retrieve host name.
+#### 1. Retrieve host name
 
 To retrieve the host name on a Linux system, you can use the **hostname** command. Open a terminal and run the following command:
 
@@ -74,7 +74,7 @@ The output is as follows, and the displayed content is the hostname.
 
 #### 2. Retrieve the operating system version
 
-Run the following command to view the operating system version.
+Run the following command to view the operating system version:
 
 ```bash
 
@@ -88,7 +88,7 @@ The output content represents information about the operating system version.
 
 #### 3. Retrieve CPU information
 
-Run the following command to view CPU information.
+Run the following command to view CPU information:
 
 ```bash
 
@@ -102,7 +102,7 @@ In the output, locate the value of **"CPU(s)"**, which represents the number of 
 
 #### 4. Retrieve Memory information
 
-Run the following command to view memory information.
+Run the following command to view memory information:
 
 ```bash
 
@@ -120,7 +120,7 @@ Look for the "Total" column, which displays the total physical memory.
 1. **Check the number of disks and the total capacity.**
 
 
-Run the following command to obtain the number of disks and their total capacity.
+Run the following command to obtain the number of disks and their total capacity:
 
 ```bash
 
@@ -128,7 +128,7 @@ lsblk
 
 ```
 
-The output content is as follows: Look for the content in the NAME column, the disks starting with "sd/vd" indicate the number of disks, and the SIZE column represents the total capacity of the disks.
+The output content is as follows, look for the content in the NAME column, the disks starting with "sd/vd" indicate the number of disks, and the SIZE column represents the total capacity of the disks:
 
 ![hyperbdr-agent-investigation-copy-9.png](./images/hyperbdr-agent-investigation-copy-9.png)
 
@@ -136,7 +136,7 @@ The output content is as follows: Look for the content in the NAME column, the d
 2. **Retrieve actual disk usage**
 
 
-Run the following command to obtain the actual disk usage.
+Run the following command to obtain the actual disk usage:
 
 ```bash
 
