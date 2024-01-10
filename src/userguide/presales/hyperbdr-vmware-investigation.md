@@ -14,7 +14,7 @@ After these steps, you will get a csv file, please send back to us.
 
 ![hyperbdr-vmware-investigation-1.png](./images/hyperbdr-vmware-investigation-1.png)
 
-#### Menu->Global Inventory Lists
+#### Menu -> Global Inventory Lists
 
 ![hyperbdr-vmware-investigation-2.png](./images/hyperbdr-vmware-investigation-2.png)
 
@@ -30,7 +30,7 @@ After these steps, you will get a csv file, please send back to us.
 
 ![hyperbdr-vmware-investigation-5.png](./images/hyperbdr-vmware-investigation-5.png)
 
-Exporting
+#### Exporting
 
 ![hyperbdr-vmware-investigation-6.png](./images/hyperbdr-vmware-investigation-6.png)
 
